@@ -11,7 +11,6 @@ public class SearchTests {
 
         Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true;
-
         open("https://google.com");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("selenide.org"));
